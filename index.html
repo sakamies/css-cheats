@@ -1,0 +1,75 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <title>Flexbox Cheatsheet</title>
+  <link rel="stylesheet" href="grid.css">
+  <link rel="stylesheet" href="cheat.css">
+  <!-- Ha! I know. A flexbox cheatsheet with a table based grid system? Yep. -->
+</head>
+<body>
+
+<!--
+  TODO:
+  - generoi koodi js:llä JSON filestä
+  - .rule, .declaration, .property ja .value focusableks, anna js:llä tabindex ja onfocusilla selectaa focusoidun elementin tekstin jotta voi copypastee
+  - css:llä :focus {user-select: all}
+  - tee effect kuvat kullekkin, näitä ei kannata generoida automaattisesti kun selainten esitystapa voi vaihdella ja pitäs kirjottaa paljon css:ää, vaan mahdollisimman illustroiva ja kompakti esimerkkikuva kustakin
+
+  - tähän vois tehdä sisäkkäisten elementtien säätämisenkin että vois näppärästi väsätä leiskoja, mutta se menee aika advancediks, mutta ideana myöhemmälle
+-->
+
+<!--
+  - radio buttoneilla voi valkata haluamansa version kustakin propertystä
+  - teksti ei oo oletuksena valittavaa
+  - klikkaamalla propertyä koko declaration valitaan ja radiobuttoni saa [selected]
+  - klikkaamalla valuee value valitaan ja radiobuttoni saa [selected] (eli declaration pitäs varmaan olla label radiobuttonille)
+  - klikkaamalla selektoria valitaan kaikki teksti jonka vieressä on valittu radio buttoni
+
+  - samanlaiset säädöt per .container ja per .item, kummallekkin omat tarvitsemansa propertyt
+-->
+
+  <div class="rule">
+    <span class="selector">.container</span> {
+
+    <div class="row-group">
+      <label for="display_flex" class="declaration">
+        <input class="radio" type="radio" name="display" id="display_flex" value="display: flex;">
+        <span class="property">display</span>:
+        <span class="value">flex</span>;
+        <img class="effect" src="fx-img/display_flex.svg" alt="">
+      </label>
+    </div>
+
+    <div class="row-group">
+      <label for="flex-direction_row" class="declaration">
+        <input class="radio" type="radio" name="flex-direction" id="flex-direction_row" value="flex-direction: row;">
+        <span class="property">flex-direction</span>:
+        <span class="value">row</span>;
+        <img class="effect" src="fx-img/flex-direction_row.svg" alt="">
+      </label>
+      <label for="flex-direction_row-reverse" class="declaration">
+        <input class="radio" type="radio" name="flex-direction" id="flex-direction_row-reverse" value="flex-direction: row-reverse;">
+        <span class="property">flex-direction</span>:
+        <span class="value">row-reverse</span>;
+        <img class="effect" src="fx-img/flex-direction_row-reverse.svg" alt="">
+      </label>
+      <label for="flex-direction_column" class="declaration">
+        <input class="radio" type="radio" name="flex-direction" id="flex-direction_column" value="flex-direction: column;">
+        <span class="property">flex-direction</span>:
+        <span class="value">column</span>;
+        <img class="effect" src="fx-img/flex-direction_column.svg" alt="">
+      </label>
+      <label for="flex-direction_column-reverse" class="declaration">
+        <input class="radio" type="radio" name="flex-direction" id="flex-direction_column-reverse" value="flex-direction: column-reverse;">
+        <span class="property">flex-direction</span>:
+        <span class="value">column-reverse</span>;
+        <img class="effect" src="fx-img/flex-direction_column-reverse.svg" alt="">
+      </label>
+    </div>
+
+    }
+  </div>
+
+</body>
+</html>

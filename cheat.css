@@ -1,0 +1,57 @@
+/*
+Monokai colors:
+
+$dark: #272822;
+$light: #f8f8f2;
+$gray: #75715e;
+$red: #f92772;
+$purple: #be84ff;
+$green: #a6e22d;
+$yellow: #e6db74;
+$orange: #f6aa10;
+$blue: #66d9ef;
+*/
+
+body {
+  font-size: 14px;
+  line-height: 22px;
+  font-family: monospace;
+  color: #f8f8f2;
+  background: #272822;
+}
+img {
+  vertical-align: middle;
+}
+
+.rule {
+  max-width: 310px;
+}
+.selector {
+  color: #a6e22d;
+}
+.row-group {
+  margin-bottom: 21px;
+}
+.declaration {
+  display: block;
+  clear: both;
+  width: 100%;
+}
+.radio {
+  display: inline-block;
+  vertical-align: middle;
+  margin: 0;
+}
+.property {
+  display: inline-block;
+  vertical-align: middle;
+  color: #66d9ef;
+}
+.value {
+  display: inline-block;
+  vertical-align: middle;
+  color: #66d9ef;
+}
+.effect {
+  float: right;
+}

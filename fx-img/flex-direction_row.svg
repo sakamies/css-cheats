@@ -1,0 +1,16 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<svg width="21px" height="21px" viewBox="0 0 21 21" version="1.1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" xmlns:sketch="http://www.bohemiancoding.com/sketch/ns">
+    <!-- Generator: Sketch 3.0.4 (8053) - http://www.bohemiancoding.com/sketch -->
+    <title>flex-direction_row</title>
+    <desc>Created with Sketch.</desc>
+    <defs></defs>
+    <g id="Page-1" stroke="none" stroke-width="1" fill="none" fill-rule="evenodd" sketch:type="MSPage">
+        <g id="flex-direction_row" sketch:type="MSLayerGroup">
+            <rect id="Rectangle-18" fill-opacity="0.5" fill="#75715E" sketch:type="MSShapeGroup" x="0" y="0" width="21" height="21"></rect>
+            <path d="M14,16 L3.5,16 L3,16 L3,15 L3.5,15 L14,15 L14,12 L17.4285714,15 L17.5293865,15 L18.0293865,15 L18.0293865,16 L17.5293865,16 L17.4285714,16 L14,19 L14,16 L14,16 Z" id="Line" fill="#66D9EF" sketch:type="MSShapeGroup"></path>
+            <rect id="Rectangle-12" fill="#A6E22D" sketch:type="MSShapeGroup" x="2" y="3" width="5" height="5"></rect>
+            <rect id="Rectangle-13" fill="#A6E22D" sketch:type="MSShapeGroup" x="8" y="3" width="5" height="5"></rect>
+            <rect id="Rectangle-14" fill="#A6E22D" sketch:type="MSShapeGroup" x="14" y="3" width="5" height="5"></rect>
+        </g>
+    </g>
+</svg>
