@@ -3,11 +3,14 @@
 <head>
   <meta charset="UTF-8">
   <title>Flexbox Cheatsheet</title>
-  <link rel="stylesheet" href="grid.css">
-  <link rel="stylesheet" href="cheat.css">
-  <!-- Ha! I know. A flexbox cheatsheet with a table based grid system? Yep. -->
+  <link rel="stylesheet" href="css/yogert.css">
+  <script src="js/jquery-2.1.1.min.js"></script>
+  <script src="js/jquery.hotkeys.js"></script>
+  <script src="js/handlebars-v1.3.0.js"></script>
+  <script src="js/yogert.js"></script>
+  <script src="js/fragment.js"></script>
 </head>
-<body>
+<body class="layout">
 
 <!--
   TODO:
@@ -29,47 +32,9 @@
   - samanlaiset säädöt per .container ja per .item, kummallekkin omat tarvitsemansa propertyt
 -->
 
-  <div class="rule">
-    <span class="selector">.container</span> {
+<div class="layout rules" data-fragment="_rule.html" data-fragment-json="rules/flexbox.json"></div>
 
-    <div class="row-group">
-      <label for="display_flex" class="declaration">
-        <input class="radio" type="radio" name="display" id="display_flex" value="display: flex;">
-        <span class="property">display</span>:
-        <span class="value">flex</span>;
-        <img class="effect" src="fx-img/display_flex.svg" alt="">
-      </label>
-    </div>
-
-    <div class="row-group">
-      <label for="flex-direction_row" class="declaration">
-        <input class="radio" type="radio" name="flex-direction" id="flex-direction_row" value="flex-direction: row;">
-        <span class="property">flex-direction</span>:
-        <span class="value">row</span>;
-        <img class="effect" src="fx-img/flex-direction_row.svg" alt="">
-      </label>
-      <label for="flex-direction_row-reverse" class="declaration">
-        <input class="radio" type="radio" name="flex-direction" id="flex-direction_row-reverse" value="flex-direction: row-reverse;">
-        <span class="property">flex-direction</span>:
-        <span class="value">row-reverse</span>;
-        <img class="effect" src="fx-img/flex-direction_row-reverse.svg" alt="">
-      </label>
-      <label for="flex-direction_column" class="declaration">
-        <input class="radio" type="radio" name="flex-direction" id="flex-direction_column" value="flex-direction: column;">
-        <span class="property">flex-direction</span>:
-        <span class="value">column</span>;
-        <img class="effect" src="fx-img/flex-direction_column.svg" alt="">
-      </label>
-      <label for="flex-direction_column-reverse" class="declaration">
-        <input class="radio" type="radio" name="flex-direction" id="flex-direction_column-reverse" value="flex-direction: column-reverse;">
-        <span class="property">flex-direction</span>:
-        <span class="value">column-reverse</span>;
-        <img class="effect" src="fx-img/flex-direction_column-reverse.svg" alt="">
-      </label>
-    </div>
-
-    }
-  </div>
+<textarea class="hide output" id="output-css"></textarea>
 
 </body>
 </html>

@@ -1,0 +1,11 @@
+# Yogert
+
+You just love making product grids with html & css, right? Didn't think so. Flexbox is a great tool for making nice layouts for lists of things, but configuring it in code is a dog fart and trying to use photoshop and the like to make a grid of items, well forget it.
+
+Try this: Make a nice looking (flexible) item. Generate a bunch of them with varying data and click around to make a nice flexbox layout. Then get the css and use it in your project. That's what Yogert is for. I't part yoga, part yogurt and doesn't smell.
+
+When you're done, here's the best guide out there to using flexbox properties on your own: [A Complete Guide to Flexbox](http://css-tricks.com/snippets/css/a-guide-to-flexbox/)
+
+----
+
+You should be using autoprefixer, so Yogert only generates the flexbox syntax according to the latest specs. Internally Yogert uses prefixfree for browser compatibility, because it works in the browser. You shouldn't use prefixfree for production sites, please use autoprefixer. (Unless you're making a browser based css generator of course.)
