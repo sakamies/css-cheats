@@ -1,5 +1,4 @@
-/*
-Monokai colors:
+//Monokai colors:
 
 $dark: #272822;
 $light: #f8f8f2;
@@ -10,7 +9,6 @@ $green: #a6e22d;
 $yellow: #e6db74;
 $orange: #f6aa10;
 $blue: #66d9ef;
-*/
 
 *,
 *::before,
@@ -24,9 +22,9 @@ body {
   font-family: monospace;
   margin: 0;
   padding: 0;
-  color: #f8f8f2;
-  background: #75715e;
-  background: #272822;
+  color: $light;
+  background: $gray;
+  background: $dark;
 }
 body::after {
   content: '';
@@ -37,14 +35,31 @@ img,
 svg {
   vertical-align: middle;
 }
-::selection {
-  color: white;
-  background: rgba(249, 39, 114, .3); /* purple? */
-  background: rgba(246, 170, 16, .5); /* orange */
+
+textarea {
+  font-family: inherit;
+  font-weight: inherit;
+  font-size: inherit;
+  line-height: inherit;
+}
+button {
+  display: inline-block;
+  vertical-align: middle;
+  height: 25px;
+  border-radius: 3px;
+  border: none;
+  color: $light;
+  background: $red;
+}
+
+/*::selection {
+  color: $light;
+  background: rgba(249, 39, 114, .3); // purple?
+  background: rgba(246, 170, 16, .5); // orange
 }
 ::-moz-selection {
-  background: rgba(249, 39, 114, .1);
-}
+  background: rgba(246, 170, 16, .5);
+}*/
 
 :focus {
   outline: none;
@@ -54,13 +69,13 @@ svg {
 }
 
 .layout {
-  min-width: 100vw;
+  min-width: 100%;
   min-height: 100vh;
   padding: 22px 11px;
   display: flex;
   flex-direction: row;
-  align-items: top;
-  justify-content: space-around;
+  align-items: flex-start;
+  justify-content: flex-start;
 }
 @media (max-width: 810px) {
   .layout {
@@ -69,23 +84,29 @@ svg {
 }
 
 .rule {
+  position: relative;
   float: left;
   max-width: 520px;
   padding: 12px 13px 13px 12px;
   margin: 0 11px;
-  background: #272822;
+  background: $dark;
   border-radius: 4px;
 }
+.copy {
+  float: right;
+}
 .selector {
-  color: #a6e22d;
+  color: $green;
+  cursor: pointer;
 }
 .row-group {
 }
 .row-group::after {
   content: '';
   display: block;
+  margin-left: 22px;
   padding-bottom: 3px;
-  border-bottom: 1px solid rgba(255,255,255,.2);
+  border-bottom: 1px dotted rgba(255,255,255,.1);
   margin-bottom: 3px;
 }
 .row-group:last-child::after {
@@ -100,6 +121,7 @@ svg {
 }
 .declaration.active {
   background: rgba(117, 113, 94, .2);
+  border-radius: 2px;
 }
 .marker::before {
   position: absolute;
@@ -108,30 +130,50 @@ svg {
   margin-right: -14px;
   white-space: pre;
   display: block;
-  color: #f92772;
+  color: $red;
 }
 .active .marker::before {
   display: inline-block;
   content: '●';
 }
 .property {
-  color: #66d9ef;
+  color: $blue;
 }
 .property::before {
   white-space: pre;
   content: '  ';
 }
 .value {
-  color: #66d9ef;
-}
-.effect {
-  position: absolute;
-  right: 0;
-  top: 50%;
-  margin-top: -10px;
+  color: $blue;
 }
 
-.output {
-  width: 1px;
-  height: 1px;
+.declaration svg {
+  position: absolute;
+  right: 2px;
+  top: 50%;
+  margin-top: -11px;
+  opacity: .5;
+}
+.declaration.active svg {
+  opacity: 1;
+}
+.declaration:not(.active) svg #selector {
+  //fill: $light;
+}
+
+.copyboard {
+  display: none;
+  position: absolute;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  width: 100%;
+  margin: 0;
+  padding: 12px 13px 13px 12px;
+  opacity: .9;
+  color: $dark;
+  background: $light;
+  border: none;
+  border-radius: 3px;
 }

@@ -36,7 +36,7 @@
           <div class="row-group">
             <?php foreach ($rowGroup as $declaration): ?>
               <?php foreach ($declaration as $property => $value): ?>
-                  <div class="declaration">
+                  <div id="<?php echo $property.'_'.$value; ?>" class="declaration">
                     <span class="marker"></span>
                     <span class="property"><?php echo $property; ?></span>:
                     <span class="value"><?php echo $value; ?></span>;
@@ -47,6 +47,7 @@
           </div>
         <?php endforeach ?>
         }
+        <textarea class="copyboard"></textarea>
       </div>
     <?php endforeach ?>
   </div>

@@ -50,7 +50,7 @@ $(document).on('ready.fragment', function(event) {
       event.preventDefault();
       event.stopPropagation();
     });
-    $(selectable).on('click', function(event) {
+    $(selectable).on('mousedown', function(event) {
       event.preventDefault();
       $(this).focus();
     });
@@ -60,6 +60,27 @@ $(document).on('ready.fragment', function(event) {
       event.stopPropagation();
       $(this).closest('.declaration').removeClass('active');
       $(this).selectText();
+    });
+
+    $('.selector').on('click', function(event) {
+      event.preventDefault();
+      var rule = $(this).closest('.rule');
+      var copyboard = rule.find('.copyboard');
+      var selector = rule.find('.selector');
+      var declarations = rule.find('.declaration.active');
+      declarations = declarations.clone();
+      declarations.find('svg').remove();
+      console.log(declarations);
+      var cssText = selector.text() + ' {';
+      cssText += declarations.text();
+      cssText += '}';
+      cssText = cssText
+        .replace(/\s/g, '')
+        .replace('{','{\n  ', 'g')
+        .replace(';',';\n  ', 'g')
+        .replace('}','\n}', 'g')
+        .replace(';\n  \n}','\n}', 'g');
+      copyboard.val(cssText).show().select();
     });
 
     $('.declaration').bind('keydown', 'up', function(event) {
@@ -102,12 +123,72 @@ $(document).on('ready.fragment', function(event) {
       next.removeClass('active');
       nextValue.focus();
     });
+    $('.declaration').bind('keydown', 'right', function(event) {
+      event.preventDefault();
+      event.stopPropagation();
+      $(this).find('.value').focus();
+    });
+    $('.value').bind('keydown', 'left', function(event) {
+      event.preventDefault();
+      event.stopPropagation();
+      $(this).closest('.declaration').focus();
+    });
+    $('.declaration, .value').bind('keydown', 'tab space', function(event) {
+      event.preventDefault();
+      event.stopPropagation();
 
-    $(document).on('beforecopy' , function(event) {
-      //TODO: before copy, copy rules and selected declarations text to textarea and copy text from there, so we don't get extra crap to pasteboard
-      console.log('kopi!');
+      var nextGroup;
+      var next;
+
+      var spaceKey = event.which === 32;
+      if (spaceKey) {
+        $(this).closest('.declaration').removeClass('active');
+      }
+
+      nextGroup = $(this).closest('.row-group').next('.row-group');
+      if (nextGroup.length === 0) {
+        nextGroup = $(this).closest('.rule').next('.rule').find('.row-group:first');
+      }
+      if (nextGroup.length === 0) {
+        nextGroup = $(this).closest('.rules').find('.rule:first .row-group:first');
+      }
+
+      next = nextGroup.find('.active:first');
+      if (next.length === 0) {
+        nextGroup.find('.declaration:first').focus();
+      } else {
+        next.focus();
+      }
+    });
+    $('.declaration, .value').bind('keydown', 'shift+tab', function(event) {
+      event.preventDefault();
+      event.stopPropagation();
+
+      var prevGroup;
+      var prev;
+
+      prevGroup = $(this).closest('.row-group').prev('.row-group');
+      console.log('1',prevGroup[0]);
+      if (prevGroup.length === 0) {
+        console.log($(this).closest('.rule'));
+        prevGroup = $(this).closest('.rule').prev('.rule').find('.row-group:last');
+      }
+      if (prevGroup.length === 0) {
+        prevGroup = $(this).closest('.rules').find('.rule:last .row-group:last');
+      }
+
+      prev = prevGroup.find('.active:first');
+      if (prev.length === 0) {
+        prevGroup.find('.declaration:first').focus();
+      } else {
+        prev.focus();
+      }
     });
 
+    $('.copyboard').on('copy click', function(event) {
+      event.preventDefault();
+      $(this).hide();
+    });
 
   }, 500);
 
