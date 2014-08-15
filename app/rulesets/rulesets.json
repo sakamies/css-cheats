@@ -1,0 +1,12 @@
+{
+  "flexbox": {
+    "title": "Flexbox cheatsheet",
+    "help-text": "",
+    "credits": {
+      "@sakamies": "http://twitter.com/sakamies"
+    },
+    "specs": {
+      "CSS-Tricks: A Complete Guide to Flexbox": "http://css-tricks.com/snippets/css/a-guide-to-flexbox/"
+    }
+  }
+}

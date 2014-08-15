@@ -1,0 +1,143 @@
+/*
+Monokai colors:
+
+$dark: #272822;
+$light: #f8f8f2;
+$gray: #75715e;
+$red: #f92772;
+$purple: #be84ff;
+$green: #a6e22d;
+$yellow: #e6db74;
+$orange: #f6aa10;
+$blue: #66d9ef;
+*/
+*, *::before, *::after {
+  -moz-box-sizing: border-box;
+       box-sizing: border-box; }
+
+body {
+  font-size: 16px;
+  line-height: 25px;
+  font-family: monospace;
+  margin: 0;
+  padding: 0;
+  color: #f8f8f2;
+  background: #75715e;
+  background: #272822; }
+
+body::after {
+  content: '';
+  display: table;
+  clear: both; }
+
+img, svg {
+  vertical-align: middle; }
+
+::-moz-selection {
+  color: white;
+  background: rgba(249, 39, 114, 0.3);
+  /* purple? */
+  background: rgba(246, 170, 16, 0.5);
+  /* orange */ }
+
+::selection {
+  color: white;
+  background: rgba(249, 39, 114, 0.3);
+  /* purple? */
+  background: rgba(246, 170, 16, 0.5);
+  /* orange */ }
+
+::-moz-selection {
+  background: rgba(249, 39, 114, 0.1); }
+
+:focus {
+  outline: none; }
+
+.hide {
+  display: none; }
+
+.layout {
+  min-width: 100vw;
+  min-height: 100vh;
+  padding: 22px 11px;
+  display: -webkit-box;
+  display: -webkit-flex;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: horizontal;
+  -webkit-box-direction: normal;
+  -webkit-flex-direction: row;
+      -ms-flex-direction: row;
+          flex-direction: row;
+  -webkit-box-align: top;
+  -webkit-align-items: top;
+      -ms-flex-align: top;
+          align-items: top;
+  -webkit-justify-content: space-around;
+      -ms-flex-pack: distribute;
+          justify-content: space-around; }
+
+@media (max-width: 810px) {
+  .layout {
+    display: block; } }
+
+.rule {
+  float: left;
+  max-width: 520px;
+  padding: 12px 13px 13px 12px;
+  margin: 0 11px;
+  background: #272822;
+  border-radius: 4px; }
+
+.selector {
+  color: #a6e22d; }
+
+.row-group::after {
+  content: '';
+  display: block;
+  padding-bottom: 3px;
+  border-bottom: 1px solid rgba(255, 255, 255, 0.2);
+  margin-bottom: 3px; }
+
+.declaration {
+  line-height: 25px;
+  white-space: nowrap;
+  display: block;
+  position: relative;
+  padding-right: 66px; }
+
+.declaration.active {
+  background: rgba(117, 113, 94, 0.2); }
+
+.marker::before {
+  position: absolute;
+  top: 0;
+  right: 100%;
+  margin-right: -14px;
+  white-space: pre;
+  display: block;
+  color: #f92772; }
+
+.active .marker::before {
+  display: inline-block;
+  content: '●'; }
+
+.property {
+  color: #66d9ef; }
+
+.property::before {
+  white-space: pre;
+  content: '  '; }
+
+.value {
+  color: #66d9ef; }
+
+.effect {
+  position: absolute;
+  right: 0;
+  top: 50%;
+  margin-top: -10px; }
+
+.output {
+  width: 1px;
+  height: 1px; }
