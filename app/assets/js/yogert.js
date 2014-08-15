@@ -76,12 +76,14 @@ $(document).on('ready.fragment', function(event) {
       cssText += '}';
       cssText = cssText
         .replace(/\s/g, '')
-        .replace('{','{\n  ', 'g')
+        .replace('{',' {\n  ', 'g')
         .replace(';',';\n  ', 'g')
         .replace('}','\n}', 'g')
         .replace(';\n  \n}','\n}', 'g');
       copyboard.val(cssText).show().select();
+      $('.overlay').show();
     });
+
 
     $('.declaration').bind('keydown', 'up', function(event) {
       event.preventDefault();
@@ -188,6 +190,14 @@ $(document).on('ready.fragment', function(event) {
     $('.copyboard').on('copy click', function(event) {
       event.preventDefault();
       $(this).hide();
+    });
+    $('.copyboard').on('keydown', 'esc', function(event) {
+      event.preventDefault();
+      $(this).hide();
+    });
+    $('.overlay').on('click', function(event) {
+      event.preventDefault();
+      $('.overlay, .copyboard').hide();
     });
 
   }, 500);

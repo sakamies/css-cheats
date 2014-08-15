@@ -7,7 +7,13 @@
 </head>
 <body class="index">
 
-  List of cheats, if more than just flexbox
+  <p>List of cheats:</p>
+
+  <ul>
+    <li>
+      <a href="./?name=flexbox">Flexbox cheatsheet</a>
+    </li>
+  </ul>
 
 </body>
 </html>

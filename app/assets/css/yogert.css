@@ -6,6 +6,7 @@ body {
   font-size: 16px;
   line-height: 25px;
   font-family: monospace;
+  -webkit-font-smoothing: antialiased;
   margin: 0;
   padding: 0;
   color: #f8f8f2;
@@ -17,23 +18,38 @@ body::after {
   display: table;
   clear: both; }
 
+a {
+  color: #f6aa10; }
+
 img, svg {
   vertical-align: middle; }
+
+h1 {
+  font-size: 32px;
+  line-height: 35px;
+  margin: 0 0 25px 0; }
+
+p {
+  margin: 0px 0 12px 0; }
 
 textarea {
   font-family: inherit;
   font-weight: inherit;
   font-size: inherit;
-  line-height: inherit; }
+  line-height: inherit;
+  -webkit-font-smoothing: inherit; }
 
 button {
   display: inline-block;
   vertical-align: middle;
   height: 25px;
+  width: 25px;
   border-radius: 3px;
   border: none;
   color: #f8f8f2;
-  background: #f92772; }
+  background: transparent;
+  border: 1px solid;
+  -webkit-font-smoothing: inherit; }
 
 /*::selection {
   color: $light;
@@ -50,8 +66,6 @@ button {
   display: none; }
 
 .layout {
-  min-width: 100%;
-  min-height: 100vh;
   padding: 22px 11px;
   display: -webkit-box;
   display: -webkit-flex;
@@ -62,6 +76,9 @@ button {
   -webkit-flex-direction: row;
       -ms-flex-direction: row;
           flex-direction: row;
+  -webkit-flex-wrap: wrap;
+      -ms-flex-wrap: wrap;
+          flex-wrap: wrap;
   -webkit-box-align: start;
   -webkit-align-items: flex-start;
       -ms-flex-align: start;
@@ -71,13 +88,32 @@ button {
       -ms-flex-pack: start;
           justify-content: flex-start; }
 
-@media (max-width: 810px) {
-  .layout {
-    display: block; } }
+.header {
+  font-family: 'Helvetica Neue', Helvetica, Arial, sans-serif;
+  -webkit-flex-shrink: 1;
+      -ms-flex-negative: 1;
+          flex-shrink: 1;
+  -webkit-box-ordinal-group: 100;
+  -webkit-order: 99;
+      -ms-flex-order: 99;
+          order: 99;
+  width: 400px;
+  padding: 0 25px 25px 25px;
+  color: rgba(248, 248, 242, 0.7); }
+
+@media (max-width: 1227px) {
+  .header {
+    -webkit-box-ordinal-group: 1;
+    -webkit-order: 0;
+        -ms-flex-order: 0;
+            order: 0;
+    width: 100%; } }
 
 .rule {
   position: relative;
-  float: left;
+  -webkit-flex-shrink: 0;
+      -ms-flex-negative: 0;
+          flex-shrink: 0;
   max-width: 520px;
   padding: 12px 13px 13px 12px;
   margin: 0 11px;
@@ -110,14 +146,16 @@ button {
   background: rgba(117, 113, 94, 0.2);
   border-radius: 2px; }
 
+.marker {
+  color: #f92772; }
+
 .marker::before {
   position: absolute;
   top: 0;
   right: 100%;
   margin-right: -14px;
   white-space: pre;
-  display: block;
-  color: #f92772; }
+  display: block; }
 
 .active .marker::before {
   display: inline-block;
@@ -158,3 +196,14 @@ button {
   background: #f8f8f2;
   border: none;
   border-radius: 3px; }
+
+.overlay {
+  display: none;
+  position: fixed;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0; }
+
+.index {
+  padding: 25px; }

@@ -5,7 +5,7 @@
   <title>Flexbox Cheatsheet</title>
   <link rel="stylesheet" href="assets/css/yogert.css">
 </head>
-<body class="layout">
+<body>
 
 <!--
   TODO:
@@ -25,6 +25,26 @@
 -->
 
   <div class="layout rules">
+    <div class="header">
+      <h1>
+        Flexbox cheatsheet
+        <br>
+        by <a href="http://twitter.com/sakamies">@sakamies</a>
+      </h1>
+      <div class="help">
+        <p>
+          Click a property or value to select its text. Makes it really fast to copy declarations.
+        </p>
+        <p>
+          The <span title="red dot" class="marker">●</span> means you selected something.
+          <br>
+          Click a <span class="selector">selector</span> to copy the whole rule with your <span class="marker">●</span> selections.
+        </p>
+        <p>
+          Use tab, &uarr;&darr;&larr;&rarr; keys and copy/paste for quick keyboard action.
+        </p>
+      </div>
+    </div>
     <?php
       $setFile = 'rulesets/'.$setName.'.cheats/'.$setName.'.json';
       $setJSON = json_decode(file_get_contents($setFile),true);
@@ -51,6 +71,8 @@
       </div>
     <?php endforeach ?>
   </div>
+
+  <div class="overlay"></div>
 
   <script src="assets/js/jquery-2.1.1.min.js"></script>
   <script src="assets/js/jquery.hotkeys.js"></script>
