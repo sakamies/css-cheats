@@ -99,6 +99,7 @@ button {
           order: 99;
   width: 400px;
   padding: 0 25px 25px 25px;
+  margin-left: auto;
   color: rgba(248, 248, 242, 0.7); }
 
 @media (max-width: 1227px) {
