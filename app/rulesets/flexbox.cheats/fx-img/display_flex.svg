@@ -1,5 +1,5 @@
 <?xml version="1.0" encoding="UTF-8" standalone="no"?>
-<svg class="effect" width="37px" height="21px" viewBox="0 0 37 21" version="1.1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" xmlns:sketch="http://www.bohemiancoding.com/sketch/ns">
+<svg width="37px" height="21px" viewBox="0 0 37 21" version="1.1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" xmlns:sketch="http://www.bohemiancoding.com/sketch/ns">
     <!-- Generator: Sketch 3.0.4 (8053) - http://www.bohemiancoding.com/sketch -->
     <title>display_flex</title>
     <desc>Created with Sketch.</desc>
@@ -7,7 +7,7 @@
         <rect id="path-1" x="0" y="0" width="37" height="21"></rect>
     </defs>
     <g id="Page-1" stroke="none" stroke-width="1" fill="none" fill-rule="evenodd" sketch:type="MSPage">
-        <g id=".container" sketch:type="MSArtboardGroup" transform="translate(-27.000000, -27.000000)">
+        <g id="container" sketch:type="MSArtboardGroup" transform="translate(-27.000000, -27.000000)">
             <g id="display_flex" sketch:type="MSLayerGroup" transform="translate(27.000000, 27.000000)">
                 <mask id="mask-2" sketch:name="mask" fill="white">
                     <use xlink:href="#path-1"></use>
