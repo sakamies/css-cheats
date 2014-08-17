@@ -38,7 +38,7 @@
         <p>
           The <span title="red dot" class="marker">●</span> means you selected something.
           <br>
-          Click a <span class="selector">selector</span> to copy the whole rule with your <span class="marker">●</span> selections.
+          Click a <span class="selector">selector</span> to copy the whole rule with your selections.
         </p>
         <p>
           Use tab, &uarr;&darr;&larr;&rarr; keys and copy/paste for quick keyboard action.
