@@ -39,8 +39,8 @@
   // If there is no name given, output the index list and die
   $setName = filter_input(INPUT_GET, 'name', FILTER_SANITIZE_STRING);
   if(isset($setName) == false){
-     include('list.php');
-     exit();
+    include('list.php');
+    exit();
   }
 
   // If a name is in the url, make sure it exists in sets.json

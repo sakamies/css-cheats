@@ -28,9 +28,10 @@
     <div class="header">
       <h1>
         Flexbox cheatsheet
-        <br>
-        by <a href="http://twitter.com/sakamies">@sakamies</a>
       </h1>
+      <h2>
+        by <a href="http://twitter.com/sakamies">@sakamies</a>
+      </h2>
       <div class="help">
         <p>
           Click a property or value to select its text. Makes it really fast to copy declarations.
@@ -38,12 +39,16 @@
         <p>
           The <span title="red dot" class="marker">●</span> means you selected something.
           <br>
-          Click a <span class="selector">selector</span> to copy the whole rule with your selections.
+          Click a <span class="selector">selector</span> to copy the whole rule set with your selections.
         </p>
         <p>
           Use tab, &uarr;&darr;&larr;&rarr; keys and copy/paste for quick keyboard action.
         </p>
       </div>
+      <h3>
+        <a href="http://apps.workflower.fi/css-cheats">CSS Cheats</a>
+        by <a href="http://twitter.com/workflower">@workflower</a>
+      </h3>
     </div>
     <?php
       $setFile = 'rulesets/'.$setName.'.cheats/'.$setName.'.json';
@@ -74,6 +79,7 @@
 
   <div class="overlay"></div>
 
+  <script src="assets/js/string.js"></script>
   <script src="assets/js/jquery-2.1.1.min.js"></script>
   <script src="assets/js/jquery.hotkeys.js"></script>
   <script src="assets/js/yogert.js"></script>

@@ -10,6 +10,7 @@ $yellow: #e6db74;
 $orange: #f6aa10;
 $blue: #66d9ef;
 
+
 *,
 *::before,
 *::after {
@@ -42,10 +43,33 @@ svg {
 h1 {
   font-size: 32px;
   line-height: 35px;
+  margin: 25px 0 25px 0;
+}
+h2 {
+  font-size: 24px;
+  line-height: 25px;
   margin: 0 0 25px 0;
+}
+h1 + h2 {
+  margin-top: -25px;
+}
+h3 {
+  font-size: inherit;
+  font-weight: bold;
+  margin: 0 0 0px 0;
 }
 p {
   margin: 0px 0 12px 0;
+}
+ul {
+  margin: 0 0 12px 0;
+  padding: 0;
+  list-style: none;
+  list-style-position: outside;
+}
+li {
+  margin: 0;
+  padding: 0;
 }
 
 textarea {
@@ -68,14 +92,27 @@ button {
   -webkit-font-smoothing: inherit;
 }
 
-/*::selection {
-  color: $light;
-  background: rgba(249, 39, 114, .3); // purple?
-  background: rgba(246, 170, 16, .5); // orange
+$selfg: #fffff8;
+$selbg: rgba(lighten(#9D550F, 10%), .65);
+$selbg: $orange;
+::selection {
+  color: $selfg;
+  background: $selbg;
 }
 ::-moz-selection {
-  background: rgba(246, 170, 16, .5);
-}*/
+  color: $selfg;
+  background: $selbg;
+}
+$selfg: $dark;
+$selbg: rgba(desaturate(darken($blue, 20%), 10%), .35);
+textarea::selection {
+  color: $selfg;
+  background: $selbg;
+}
+textarea::-moz-selection {
+  color: $selfg;
+  background: $selbg;
+}
 
 :focus {
   outline: none;
@@ -85,7 +122,7 @@ button {
 }
 
 .layout {
-  padding: 22px 11px;
+  min-height: 100vh;
   display: flex;
   flex-direction: row;
   flex-wrap: wrap;
@@ -98,23 +135,31 @@ button {
   flex-shrink: 1;
   order: 99;
   width: 400px;
+  align-self: stretch;
   padding: 0 25px 25px 25px;
   margin-left: auto;
   color: rgba($light, .7);
+  border: 1px solid rgba($light, .2);
+  border-width: 0px 0px 0px 1px;
 }
 @media (max-width: 1227px) {
   .header {
-    order: 0;
+    order: 99;
     width: 100%;
+    align-self: auto;
+    border-width: 1px 0px 0px 0px;
   }
+}
+.help {
+  margin: 25px 0 50px 0;
 }
 
 .rule {
   position: relative;
   flex-shrink: 0;
   max-width: 520px;
-  padding: 12px 13px 13px 12px;
-  margin: 0 11px;
+  padding: 25px 13px 25px 12px;
+  margin: 0 12px;
   background: $dark;
   border-radius: 4px;
 }
@@ -130,7 +175,7 @@ button {
 .row-group::after {
   content: '';
   display: block;
-  margin-left: 22px;
+  margin-left: 20px;
   padding-bottom: 3px;
   border-bottom: 1px dotted rgba(255,255,255,.1);
   margin-bottom: 3px;
@@ -197,9 +242,9 @@ button {
   right: 0;
   bottom: 0;
   width: 100%;
+  height: 100%;
   margin: 0;
   padding: 12px 13px 13px 12px;
-  opacity: .9;
   color: $dark;
   background: $light;
   border: none;
@@ -212,9 +257,4 @@ button {
   left: 0;
   right: 0;
   bottom: 0;
-}
-
-
-.index {
-  padding: 25px;
 }
