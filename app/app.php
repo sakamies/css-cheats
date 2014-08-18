@@ -37,12 +37,13 @@
           Click a property or value to select its text. Makes it really fast to copy declarations.
         </p>
         <p>
-          The <span title="red dot" class="marker">●</span> means you selected something.
-          <br>
-          Click a <span class="selector">selector</span> to copy the whole rule set with your selections.
+          The <span title="red dot" class="marker">●</span> means you selected something. (Click it to unselect.)
         </p>
         <p>
-          Use tab, &uarr;&darr;&larr;&rarr; keys and copy/paste for quick keyboard action.
+          Click a <span class="selector">selector</span> to get the whole rule set with your selections. (Click anywhere or copy the text to clipboard to dismiss.)
+        </p>
+        <p>
+          Use tab, space, &uarr;&darr;&larr;&rarr; keys and copy/paste for quick keyboard action.
         </p>
       </div>
       <h3>
