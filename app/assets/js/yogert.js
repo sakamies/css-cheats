@@ -81,7 +81,7 @@ $(document).on('ready.fragment', function(event) {
       cssText = cssText
         .replaceAll(' ', '')
         .replaceAll('\n', '')
-        .replaceAll('{', '{\n  ')
+        .replaceAll('{', ' {\n  ')
         .replaceAll(':', ': ')
         .replaceAll(';', ';\n  ')
         .replaceAll('  }', '}');
