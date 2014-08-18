@@ -21,7 +21,6 @@ jQuery.fn.selectText = function(){
     selection.addRange(range);
   }
 };
-//TODO: support selecting multiple ranges? so chen clicking .selector, it would select all .active declarations, ready for copy & paste
 
 
 $(document).on('ready.fragment', function(event) {
@@ -38,20 +37,22 @@ $(document).on('ready.fragment', function(event) {
     $(selectable).on('focus', function(event) {
       var decl = $(this).closest('.declaration');
 
-      /*$('.selected').removeClass('selected');
-      $(this).addClass('selected');*/
-      $(this).selectText();
-
       decl.addClass('active');
       decl.siblings().removeClass('active');
 
+      $('.focus').removeClass('focus');
+      $(this).addClass('focus');
+      setTimeout(function () {
+        $('.focus').selectText();
+      }, 0);
     });
-    $(selectable).on('mousedown mouseup click', function(event) {
+    $(selectable).on('mouseup click', function(event) {
       event.preventDefault();
       event.stopPropagation();
     });
     $(selectable).on('mousedown', function(event) {
       event.preventDefault();
+      event.stopPropagation();
       $(this).focus();
     });
 
@@ -68,19 +69,22 @@ $(document).on('ready.fragment', function(event) {
       var copyboard = rule.find('.copyboard');
       var selector = rule.find('.selector');
       var declarations = rule.find('.declaration.active');
+      var cssText = '';
+
       declarations = declarations.clone();
       declarations.find('svg').remove();
       console.log(declarations);
-      var cssText = selector.text() + ' {';
+      cssText = selector.text() + ' {';
       cssText += declarations.text();
       cssText += '}';
+      cssText = S(cssText);
       cssText = cssText
-        .replace(/\s/g, '')
-        .replace('{',' {\n  ', 'g')
-        .replace(';',';\n  ', 'g')
-        .replace('}','\n}', 'g')
-        .replace(';\n  \n}','\n}', 'g');
-      copyboard.val(cssText).show().select();
+        .replaceAll(' ', '')
+        .replaceAll('\n', '')
+        .replaceAll('{', '\n  ')
+        .replaceAll(';', ';\n  ')
+        .replaceAll('  }', '}');
+      copyboard.val(cssText.s).show().select();
       $('.overlay').show();
     });
 
