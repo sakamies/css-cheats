@@ -7,23 +7,6 @@
 </head>
 <body>
 
-<!--
-  TODO:
-  - generoi koodi php:llä JSON filestä
-  - joku sample alue joka on samoilla tyyleillä kun esimerkkikuvat
-  - tähän vois tehdä sisäkkäisten elementtien säätämisenkin että vois näppärästi väsätä leiskoja, mutta se menee aika advancediks, mutta ideana myöhemmälle
--->
-
-<!--
-  - nuolinäppäimillä valkata haluamansa version kustakin propertystä
-    -  ylös/alas vaihtaa pylpyrän paikkaa declarationien kesken, vasen/oikee valkkaa onko declaration vai value valittuna
-  - klikkaamalla propertyä koko declaration valitaan ja se saa pylpyrän
-  - klikkaamalla valuee value valitaan ja declaration saa pylpyrän
-  - klikkaamalla selektoria valitaan kaikki declarationit jonka vieressä pylpyrä
-  - cmd/ctrl+a ei valkkaa koko dokumentin tekstiä, vaan pelkästään kaikki rulet ja niiden declarationit joilla on pylpyrä
-  - tabilla voi hyppiä row-grouppien välillä, focus menee aina seuraavan row-groupin pylpyrällä varustettuun declarationiin
--->
-
   <div class="layout rules">
     <div class="header">
       <h1>
@@ -40,7 +23,7 @@
           The <span title="red dot" class="marker">●</span> means you selected something. (Click it to unselect.)
         </p>
         <p>
-          Click a <span class="selector">selector</span> to get the whole rule set with your selections. (Click anywhere or copy the text to clipboard to dismiss.)
+          Click a <span class="selector">selector</span> to get the whole rule set with your selections. (Click outside the textarea or copy the text to clipboard to dismiss.)
         </p>
         <p>
           Use tab, space, &uarr;&darr;&larr;&rarr; keys and copy/paste for quick keyboard action.

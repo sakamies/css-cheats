@@ -81,10 +81,11 @@ $(document).on('ready.fragment', function(event) {
       cssText = cssText
         .replaceAll(' ', '')
         .replaceAll('\n', '')
-        .replaceAll('{', '\n  ')
+        .replaceAll('{', '{\n  ')
+        .replaceAll(':', ': ')
         .replaceAll(';', ';\n  ')
         .replaceAll('  }', '}');
-      copyboard.val(cssText.s).show().select();
+      copyboard.val(cssText.s).addClass('show').show().select();
       $('.overlay').show();
     });
 
@@ -191,9 +192,10 @@ $(document).on('ready.fragment', function(event) {
       }
     });
 
-    $('.copyboard').on('copy click', function(event) {
-      event.preventDefault();
-      $(this).hide();
+    $('.copyboard').on('copy', function(event) {
+      setTimeout(function () {
+        $('.copyboard.show').removeClass('show').hide();
+      }, 0);
     });
     $('.copyboard').on('keydown', 'esc', function(event) {
       event.preventDefault();
@@ -201,7 +203,7 @@ $(document).on('ready.fragment', function(event) {
     });
     $('.overlay').on('click', function(event) {
       event.preventDefault();
-      $('.overlay, .copyboard').hide();
+      $('.overlay, .copyboard.show').removeClass('show').hide();
     });
 
   }, 500);
