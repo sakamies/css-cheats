@@ -16,9 +16,11 @@
 
       <ul>
         <li>
-          <a href="./?name=flexbox">Flexbox cheatsheet</a>
+          • <a href="./?name=flexbox">Flexbox cheatsheet</a>
         </li>
       </ul>
+
+      <p>Please report any issues at <a href="https://github.com/sakamies/css-cheats">Github</a></p>
     </div>
   </div>
 

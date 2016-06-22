@@ -33,6 +33,7 @@
         <a href="http://apps.workflower.fi/css-cheats">CSS Cheats</a>
         by <a href="http://twitter.com/workflower">@workflower</a>
       </h3>
+      <p>Please report any issues at <a href="https://github.com/sakamies/css-cheats">Github</a></p>
     </div>
     <?php
       $setFile = 'rulesets/'.$setName.'.cheats/'.$setName.'.json';
