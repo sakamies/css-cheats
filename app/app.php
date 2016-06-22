@@ -49,7 +49,12 @@
                     <span class="marker"></span>
                     <span class="property"><?php echo $property; ?></span>:
                     <span class="value"><?php echo $value; ?></span>;
-                    <?php readfile('rulesets/'.$setName.'.cheats/fx-img/'.$property.'_'.$value.'.svg'); ?>
+                    <?php
+                      $svgPath = 'rulesets/'.$setName.'.cheats/fx-img/'.$property.'_'.$value.'.svg';
+                      if (file_exists($svgPath)) {
+                        readfile($svgPath);
+                      }
+                    ?>
                   </div>
               <?php endforeach ?>
             <?php endforeach ?>
