@@ -1,6 +1,8 @@
-*, *::before, *::after {
-  -moz-box-sizing: border-box;
-       box-sizing: border-box; }
+@charset "UTF-8";
+*,
+*::before,
+*::after {
+  box-sizing: border-box; }
 
 body {
   font-size: 16px;
@@ -21,7 +23,8 @@ body::after {
 a {
   color: #f6aa10; }
 
-img, svg {
+img,
+svg {
   vertical-align: middle; }
 
 h1 {
@@ -88,15 +91,15 @@ button {
 
 textarea::-moz-selection {
   color: #272822;
-  background: rgba(34, 178, 204, 0.35); }
+  background: rgba(35, 177, 204, 0.35); }
 
 textarea::selection {
   color: #272822;
-  background: rgba(34, 178, 204, 0.35); }
+  background: rgba(35, 177, 204, 0.35); }
 
 textarea::-moz-selection {
   color: #272822;
-  background: rgba(34, 178, 204, 0.35); }
+  background: rgba(35, 177, 204, 0.35); }
 
 :focus {
   outline: none; }
@@ -107,39 +110,31 @@ textarea::-moz-selection {
 .layout {
   min-height: 100vh;
   display: -webkit-box;
-  display: -webkit-flex;
   display: -ms-flexbox;
   display: flex;
   -webkit-box-orient: horizontal;
   -webkit-box-direction: normal;
-  -webkit-flex-direction: row;
       -ms-flex-direction: row;
           flex-direction: row;
-  -webkit-flex-wrap: wrap;
-      -ms-flex-wrap: wrap;
-          flex-wrap: wrap;
+  -ms-flex-wrap: wrap;
+      flex-wrap: wrap;
   -webkit-box-align: start;
-  -webkit-align-items: flex-start;
       -ms-flex-align: start;
           align-items: flex-start;
   -webkit-box-pack: start;
-  -webkit-justify-content: flex-start;
       -ms-flex-pack: start;
           justify-content: flex-start; }
 
 .header {
   font-family: 'Helvetica Neue', Helvetica, Arial, sans-serif;
-  -webkit-flex-shrink: 1;
-      -ms-flex-negative: 1;
-          flex-shrink: 1;
+  -ms-flex-negative: 1;
+      flex-shrink: 1;
   -webkit-box-ordinal-group: 100;
-  -webkit-order: 99;
       -ms-flex-order: 99;
           order: 99;
   width: 400px;
-  -webkit-align-self: stretch;
-      -ms-flex-item-align: stretch;
-          align-self: stretch;
+  -ms-flex-item-align: stretch;
+      align-self: stretch;
   padding: 0 25px 25px 25px;
   margin-left: auto;
   color: rgba(248, 248, 242, 0.7);
@@ -149,13 +144,11 @@ textarea::-moz-selection {
 @media (max-width: 1227px) {
   .header {
     -webkit-box-ordinal-group: 100;
-    -webkit-order: 99;
         -ms-flex-order: 99;
             order: 99;
     width: 100%;
-    -webkit-align-self: auto;
-        -ms-flex-item-align: auto;
-            align-self: auto;
+    -ms-flex-item-align: auto;
+        align-self: auto;
     border-width: 1px 0px 0px 0px; } }
 
 .help {
@@ -163,9 +156,8 @@ textarea::-moz-selection {
 
 .rule {
   position: relative;
-  -webkit-flex-shrink: 0;
-      -ms-flex-negative: 0;
-          flex-shrink: 0;
+  -ms-flex-negative: 0;
+      flex-shrink: 0;
   max-width: 520px;
   padding: 25px 13px 25px 12px;
   margin: 0 12px;
@@ -183,6 +175,9 @@ textarea::-moz-selection {
   padding-bottom: 3px;
   border-bottom: 1px dotted rgba(255, 255, 255, 0.1);
   margin-bottom: 3px; }
+
+.row-group:last-child::after {
+  /*display: none;*/ }
 
 .declaration {
   line-height: 25px;
@@ -225,7 +220,7 @@ textarea::-moz-selection {
   right: 2px;
   top: 50%;
   margin-top: -11px;
-  opacity: 0.5; }
+  opacity: .8; }
 
 .declaration.active svg {
   opacity: 1; }

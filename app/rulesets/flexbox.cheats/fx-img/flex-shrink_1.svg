@@ -1,14 +1,14 @@
 <?xml version="1.0" encoding="UTF-8" standalone="no"?>
 <svg width="37px" height="21px" viewBox="0 0 37 21" version="1.1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink">
     <!-- Generator: Sketch 3.8.3 (29802) - http://www.bohemiancoding.com/sketch -->
-    <title>flex-shrink_0</title>
+    <title>flex-shrink_1</title>
     <desc>Created with Sketch.</desc>
     <defs>
         <rect id="path-1" x="0" y="0" width="37" height="21"></rect>
     </defs>
     <g id="Page-1" stroke="none" stroke-width="1" fill="none" fill-rule="evenodd">
-        <g id="item" transform="translate(-27.000000, -247.000000)">
-            <g id="flex-shrink_0" transform="translate(27.000000, 247.000000)">
+        <g id="item" transform="translate(-27.000000, -277.000000)">
+            <g id="flex-shrink_1" transform="translate(27.000000, 277.000000)">
                 <mask id="mask-2" fill="white">
                     <use xlink:href="#path-1"></use>
                 </mask>
@@ -19,7 +19,7 @@
                     <path d="M30,2.9999602 L30,18.0000398 C30,18.5523026 30.4433532,19 31.0093689,19 L33.9906311,19 C34.5480902,19 35,18.5452911 35,18.0000398 L35,2.9999602 C35,2.44769743 34.5566468,2 33.9906311,2 L31.0093689,2 C30.4519098,2 30,2.45470893 30,2.9999602 Z M33.9857009,3 C34.003033,3 33.9997527,2.99782053 33.9997527,2.9999602 L33.9997527,18.0000398 C33.9997527,17.9944105 33.9913313,18 33.9857009,18 L31.0141342,18 C30.9968021,18 31.0000824,18.0021795 31.0000824,18.0000398 L31.0000824,2.9999602 C31.0000824,3.00558949 31.0085038,3 31.0141342,3 L33.9857009,3 Z" id="Rectangle-152"></path>
                 </g>
                 <path d="M2,2.9999602 L2,18.0000398 C2,18.5523026 2.43891776,19 3.00307055,19 L21.9969294,19 C22.55091,19 23,18.5452911 23,18.0000398 L23,2.9999602 C23,2.44769743 22.5610822,2 21.9969294,2 L3.00307055,2 C2.44908998,2 2,2.45470893 2,2.9999602 Z M21.9960561,3 C22.0028184,3 21.9988341,18.0000398 21.9988341,18.0000398 C21.9988341,17.9958139 3.00265517,18 3.00265517,18 C2.99589285,18 2.9998772,2.9999602 2.9998772,2.9999602 C2.9998772,3.0041861 21.9960561,3 21.9960561,3 Z" id="selector" fill="#A6E22D" mask="url(#mask-2)"></path>
-                <path d="M23,10 L23,11 L21,11 L21,14 L17,10.5 L21,7 L21,10 L23,10 Z M16,6 L17,6 L17,15 L16,15 L16,6 Z M8,6 L9,6 L9,15 L8,15 L8,6 Z M2,10 L2,11 L4,11 L4,14 L8,10.5 L4,7 L4,10 L2,10 Z" id="value" fill="#66D9EF" mask="url(#mask-2)"></path>
+                <path d="M23,10 L23,11 L19,11 L19,14 L15,10.5 L19,7 L19,10 L23,10 Z M2,10 L2,11 L6,11 L6,14 L10,10.5 L6,7 L6,10 L2,10 Z" id="value" fill="#66D9EF" mask="url(#mask-2)"></path>
             </g>
         </g>
     </g>

@@ -52,7 +52,7 @@
     exit();
   } else {
     // Ok cool, we have a cheatsheet, time party
-    //Read page title and stuff from sets.json according to bundle
+    // Read page title and stuff from sets.json according to bundle
     $set = $sets[$setName];
     $title = $set['title'];
     $credits = creditsLinks($set['credits']);
